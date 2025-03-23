@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <footer className="bg-slate-50 border-t border-slate-100">
       <div className="container mx-auto px-4 py-12 md:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
           <div className="space-y-4">
             <Link to="/" className="inline-block">
               <h3 className="text-xl font-bold tracking-tight">
@@ -16,7 +16,7 @@ const Footer = () => {
               </h3>
             </Link>
             <p className="text-sm text-slate-600 max-w-xs">
-              We provide the most comprehensive practice exams to help you prepare for and pass your RBT examination.
+              We provide free comprehensive practice exams to help you prepare for and pass your RBT examination.
             </p>
             <div className="flex space-x-4 pt-2">
               <SocialLink href="https://twitter.com" icon={<Twitter size={18} />} />
@@ -30,7 +30,6 @@ const Footer = () => {
             <h4 className="font-medium text-sm text-slate-900 mb-4 uppercase tracking-wider">Quick Links</h4>
             <ul className="space-y-3">
               <FooterLink href="/exams">Practice Exams</FooterLink>
-              <FooterLink href="/pricing">Pricing</FooterLink>
               <FooterLink href="/faq">FAQ</FooterLink>
               <FooterLink href="/contact">Contact Us</FooterLink>
             </ul>
@@ -43,15 +42,6 @@ const Footer = () => {
               <FooterLink href="/guides">Study Guides</FooterLink>
               <FooterLink href="/tips">Exam Tips</FooterLink>
               <FooterLink href="/flashcards">Flashcards</FooterLink>
-            </ul>
-          </div>
-          
-          <div>
-            <h4 className="font-medium text-sm text-slate-900 mb-4 uppercase tracking-wider">Legal</h4>
-            <ul className="space-y-3">
-              <FooterLink href="/terms">Terms of Service</FooterLink>
-              <FooterLink href="/privacy">Privacy Policy</FooterLink>
-              <FooterLink href="/cookies">Cookie Policy</FooterLink>
             </ul>
           </div>
         </div>

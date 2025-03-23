@@ -12,20 +12,17 @@ const CallToAction = () => {
             Ready to Ace Your RBT Exam?
           </h2>
           <p className="text-lg md:text-xl text-blue-100 mb-10 max-w-3xl mx-auto">
-            Join thousands of successful candidates who have prepared with our comprehensive practice exams. Start your journey to certification today.
+            Join thousands of successful candidates who have prepared with our free comprehensive practice exams. Start your journey to certification today.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button asChild size="lg" variant="secondary" className="w-full sm:w-auto bg-white text-blue-600 hover:bg-blue-50">
               <Link to="/exams">
-                Browse Practice Exams <ArrowRight size={16} className="ml-2" />
+                Start Practice Now <ArrowRight size={16} className="ml-2" />
               </Link>
-            </Button>
-            <Button asChild variant="outline" size="lg" className="w-full sm:w-auto text-white border-white hover:bg-blue-700">
-              <Link to="/pricing">View Pricing</Link>
             </Button>
           </div>
           <p className="mt-8 text-blue-100 text-sm">
-            Not ready yet? <Link to="/learn" className="underline hover:text-white transition-colors">Explore our free resources</Link>
+            100% Free - No sign up required
           </p>
         </div>
       </div>

@@ -14,7 +14,6 @@ const mockExams = [
     questions: 85,
     duration: 90,
     difficulty: 'Intermediate' as const,
-    price: 'Free',
     tags: ['Complete Exam'],
     popular: true,
   },
@@ -25,7 +24,6 @@ const mockExams = [
     questions: 85,
     duration: 90,
     difficulty: 'Intermediate' as const,
-    price: '$12.99',
     tags: ['Complete Exam'],
   },
   {
@@ -35,7 +33,6 @@ const mockExams = [
     questions: 25,
     duration: 30,
     difficulty: 'Beginner' as const,
-    price: '$5.99',
     tags: ['Topic Specific'],
   },
   {
@@ -45,7 +42,6 @@ const mockExams = [
     questions: 25,
     duration: 30,
     difficulty: 'Advanced' as const,
-    price: '$5.99',
     tags: ['Topic Specific'],
   },
   {
@@ -55,7 +51,6 @@ const mockExams = [
     questions: 20,
     duration: 25,
     difficulty: 'Beginner' as const,
-    price: '$4.99',
     tags: ['Topic Specific'],
   },
   {
@@ -65,7 +60,6 @@ const mockExams = [
     questions: 50,
     duration: 60,
     difficulty: 'Advanced' as const,
-    price: '$9.99',
     tags: ['Challenge'],
     popular: true,
   },
@@ -89,7 +83,6 @@ const ExamList = () => {
     { label: 'Beginner', value: 'Beginner' },
     { label: 'Intermediate', value: 'Intermediate' },
     { label: 'Advanced', value: 'Advanced' },
-    { label: 'Free', value: 'Free' },
     { label: 'Complete Exam', value: 'Complete Exam' },
     { label: 'Topic Specific', value: 'Topic Specific' },
   ];
