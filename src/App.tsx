@@ -10,6 +10,12 @@ import ExamSelection from "./pages/ExamSelection";
 import ExamTaking from "./pages/ExamTaking";
 import Results from "./pages/Results";
 import NotFound from "./pages/NotFound";
+import Blog from "./pages/Blog";
+import StudyGuides from "./pages/StudyGuides";
+import ExamTips from "./pages/ExamTips";
+import Flashcards from "./pages/Flashcards";
+import Faq from "./pages/Faq";
+import Contact from "./pages/Contact";
 
 const queryClient = new QueryClient();
 
@@ -25,6 +31,12 @@ const App = () => (
             <Route path="/exams" element={<ExamSelection />} />
             <Route path="/exam/:examId" element={<ExamTaking />} />
             <Route path="/results" element={<Results />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/guides" element={<StudyGuides />} />
+            <Route path="/tips" element={<ExamTips />} />
+            <Route path="/flashcards" element={<Flashcards />} />
+            <Route path="/faq" element={<Faq />} />
+            <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </AnimatePresence>
