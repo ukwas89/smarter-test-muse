@@ -12,17 +12,17 @@ const Footer = () => {
           <div className="space-y-4">
             <Link to="/" className="inline-block">
               <h3 className="text-xl font-bold tracking-tight">
-                <span className="text-primary">RBT</span>Practice
+                <span className="text-primary">Practice</span>RBTExam
               </h3>
             </Link>
             <p className="text-sm text-slate-600 max-w-xs">
-              We provide free comprehensive practice exams to help you prepare for and pass your RBT examination.
+              We provide free comprehensive RBT practice exams to help you prepare for and pass your Registered Behavior Technician examination.
             </p>
             <div className="flex space-x-4 pt-2">
               <SocialLink href="https://twitter.com" icon={<Twitter size={18} />} />
               <SocialLink href="https://facebook.com" icon={<Facebook size={18} />} />
               <SocialLink href="https://instagram.com" icon={<Instagram size={18} />} />
-              <SocialLink href="mailto:contact@rbtpractice.com" icon={<Mail size={18} />} />
+              <SocialLink href="mailto:contact@practicerbtexam.com" icon={<Mail size={18} />} />
             </div>
           </div>
           
@@ -30,6 +30,7 @@ const Footer = () => {
             <h4 className="font-medium text-sm text-slate-900 mb-4 uppercase tracking-wider">Quick Links</h4>
             <ul className="space-y-3">
               <FooterLink href="/exams">Practice Exams</FooterLink>
+              <FooterLink href="/about">About Us</FooterLink>
               <FooterLink href="/faq">FAQ</FooterLink>
               <FooterLink href="/contact">Contact Us</FooterLink>
               <FooterLink href="/privacy-policy">Privacy Policy</FooterLink>
@@ -48,7 +49,7 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-slate-200 mt-10 pt-6 flex flex-col space-y-4 text-sm text-slate-500">
-          <p className="text-center md:text-left">© {currentYear} RBT Practice. All rights reserved.</p>
+          <p className="text-center md:text-left">© {currentYear} PracticeRBTExam.com. All rights reserved.</p>
           <p className="text-center md:text-left text-xs">
             Registered Behavior Technician® (RBT®) is a registered trademark of the Behavior Analyst Certification Board, Inc.® (BACB®), which does not sponsor or endorse this website.
           </p>

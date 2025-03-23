@@ -24,7 +24,7 @@ const Hero = () => {
             transition={{ duration: 0.5 }}
           >
             <span className="inline-block px-4 py-1.5 mb-6 text-xs font-medium uppercase tracking-wider text-primary bg-blue-50 rounded-full">
-              The Ultimate RBT Exam Preparation
+              Free RBT Exam Preparation
             </span>
           </motion.div>
           
@@ -34,7 +34,7 @@ const Hero = () => {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-4xl sm:text-5xl md:text-6xl font-bold text-slate-900 tracking-tight mb-6"
           >
-            Master the RBT Exam with Confidence
+            Free RBT Practice Exams for Certification Success
           </motion.h1>
           
           <motion.p
@@ -43,7 +43,7 @@ const Hero = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-lg sm:text-xl text-slate-600 mb-10 max-w-3xl mx-auto"
           >
-            Comprehensive practice exams designed by experts to help you prepare, practice, and pass your RBT certification exam with flying colors.
+            Prepare for your Registered Behavior Technician (RBT) certification with comprehensive practice exams designed by experts. Our free resources help you master the RBT Task List, build confidence, and pass your exam with flying colors.
           </motion.p>
           
           <motion.div
@@ -54,11 +54,11 @@ const Hero = () => {
           >
             <Button asChild size="lg" className="w-full sm:w-auto font-medium">
               <Link to="/exams">
-                Start Practicing Now <ArrowRight size={16} className="ml-2" />
+                Take Free RBT Practice Exam <ArrowRight size={16} className="ml-2" />
               </Link>
             </Button>
             <Button asChild variant="outline" size="lg" className="w-full sm:w-auto">
-              <Link to="/about">Learn More</Link>
+              <Link to="/about">Learn More About Our RBT Resources</Link>
             </Button>
           </motion.div>
           
@@ -68,7 +68,7 @@ const Hero = () => {
             transition={{ duration: 0.5, delay: 0.5 }}
             className="mt-14 text-sm text-slate-500 flex flex-wrap justify-center gap-6 items-center"
           >
-            <p>Trusted by thousands of candidates</p>
+            <p>Trusted by thousands of RBT candidates</p>
             <div className="flex space-x-1">
               {[1, 2, 3, 4, 5].map((star) => (
                 <svg key={star} xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FFB400" viewBox="0 0 16 16">
@@ -76,7 +76,7 @@ const Hero = () => {
                 </svg>
               ))}
             </div>
-            <p>4.9/5 rating from 2,000+ reviews</p>
+            <p>4.9/5 rating from 2,000+ RBT exam candidates</p>
           </motion.div>
         </div>
       </div>

@@ -40,7 +40,7 @@ const Navbar = () => {
             to="/" 
             className="text-xl font-bold tracking-tight text-slate-900 transition-all duration-200 hover:opacity-80"
           >
-            <span className="text-primary">RBT</span>Practice
+            <span className="text-primary">Practice</span>RBTExam
           </Link>
           
           {/* Desktop Navigation */}
@@ -93,7 +93,10 @@ const NavLinks = () => (
       Home
     </Link>
     <Link to="/exams" className="text-sm font-medium text-slate-700 hover:text-primary transition-colors">
-      Exams
+      Practice Exams
+    </Link>
+    <Link to="/guides" className="text-sm font-medium text-slate-700 hover:text-primary transition-colors">
+      Study Guides
     </Link>
     <Link to="/about" className="text-sm font-medium text-slate-700 hover:text-primary transition-colors">
       About Us
@@ -107,7 +110,10 @@ const MobileNavLinks = () => (
       Home
     </Link>
     <Link to="/exams" className="text-base font-medium text-slate-900 py-2">
-      Exams
+      Practice Exams
+    </Link>
+    <Link to="/guides" className="text-base font-medium text-slate-900 py-2">
+      Study Guides
     </Link>
     <Link to="/about" className="text-base font-medium text-slate-900 py-2">
       About Us
