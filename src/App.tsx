@@ -16,6 +16,7 @@ import ExamTips from "./pages/ExamTips";
 import Flashcards from "./pages/Flashcards";
 import Faq from "./pages/Faq";
 import Contact from "./pages/Contact";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 
 const queryClient = new QueryClient();
 
@@ -37,6 +38,7 @@ const App = () => (
             <Route path="/flashcards" element={<Flashcards />} />
             <Route path="/faq" element={<Faq />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </AnimatePresence>

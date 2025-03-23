@@ -32,6 +32,7 @@ const Footer = () => {
               <FooterLink href="/exams">Practice Exams</FooterLink>
               <FooterLink href="/faq">FAQ</FooterLink>
               <FooterLink href="/contact">Contact Us</FooterLink>
+              <FooterLink href="/privacy-policy">Privacy Policy</FooterLink>
             </ul>
           </div>
           
@@ -46,10 +47,10 @@ const Footer = () => {
           </div>
         </div>
         
-        <div className="border-t border-slate-200 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center text-sm text-slate-500">
-          <p>© {currentYear} RBT Practice. All rights reserved.</p>
-          <p className="mt-2 md:mt-0">
-            Designed and built with attention to every detail.
+        <div className="border-t border-slate-200 mt-10 pt-6 flex flex-col space-y-4 text-sm text-slate-500">
+          <p className="text-center md:text-left">© {currentYear} RBT Practice. All rights reserved.</p>
+          <p className="text-center md:text-left text-xs">
+            Registered Behavior Technician® (RBT®) is a registered trademark of the Behavior Analyst Certification Board, Inc.® (BACB®), which does not sponsor or endorse this website.
           </p>
         </div>
       </div>
