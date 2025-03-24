@@ -64,6 +64,12 @@ const Features = () => {
           <p className="text-lg text-slate-600">
             Our platform offers all the necessary tools and resources to help you prepare effectively for your RBT certification exam.
           </p>
+ <p className="text-lg text-slate-600">
+         <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">Practice Test</p>
+ You may get ready for your Registered Behavior Technician certification exam by using our free RBT practice questions.  There are four online practice exams available on our website.  They include difficult queries and thorough justifications.  To begin studying immediately, click on any of the RBT practice tests provided below!
+
+          </p>
+          
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
