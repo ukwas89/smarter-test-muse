@@ -22,6 +22,19 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
+            className="flex justify-center mb-8"
+          >
+            <img 
+              src="/lovable-uploads/5eae210c-3b37-447e-bdfc-75f728932f7b.png" 
+              alt="RBT Practice Exams Logo" 
+              className="h-32 w-auto"
+            />
+          </motion.div>
+          
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
           >
             <span className="inline-block px-4 py-1.5 mb-6 text-xs font-medium uppercase tracking-wider text-primary bg-blue-50 rounded-full">
               Free RBT Exam Preparation

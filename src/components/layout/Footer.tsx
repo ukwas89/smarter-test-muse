@@ -10,7 +10,12 @@ const Footer = () => {
       <div className="container mx-auto px-4 py-12 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
           <div className="space-y-4">
-            <Link to="/" className="inline-block">
+            <Link to="/" className="inline-flex items-center gap-2">
+              <img 
+                src="/lovable-uploads/5eae210c-3b37-447e-bdfc-75f728932f7b.png" 
+                alt="PracticeRBTExam Logo" 
+                className="h-10 w-auto"
+              />
               <h3 className="text-xl font-bold tracking-tight">
                 <span className="text-primary">Practice</span>RBTExam
               </h3>

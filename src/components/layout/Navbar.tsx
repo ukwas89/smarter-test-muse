@@ -38,9 +38,16 @@ const Navbar = () => {
         <div className="flex items-center justify-between">
           <Link 
             to="/" 
-            className="text-xl font-bold tracking-tight text-slate-900 transition-all duration-200 hover:opacity-80"
+            className="flex items-center gap-2 transition-all duration-200 hover:opacity-80"
           >
-            <span className="text-primary">Practice</span>RBTExam
+            <img 
+              src="/lovable-uploads/5eae210c-3b37-447e-bdfc-75f728932f7b.png" 
+              alt="PracticeRBTExam Logo" 
+              className="h-10 w-auto"
+            />
+            <span className="text-xl font-bold tracking-tight text-slate-900">
+              <span className="text-primary">Practice</span>RBTExam
+            </span>
           </Link>
           
           {/* Desktop Navigation */}
