@@ -3,6 +3,17 @@
 User-agent: *
 Allow: /
 
+# Disallow crawling of certain file types
+Disallow: /*.json$
+Disallow: /*.js$
+Disallow: /*.css$
+
+# Set crawl delay for bots
+Crawl-delay: 1
+
+# Block access to admin or private areas if needed
+# Disallow: /admin/
+# Disallow: /private/
+
 # Sitemap location
 Sitemap: https://practicerbtexam.com/sitemap.xml
-
