@@ -12,6 +12,7 @@ import ExamTaking from "./pages/ExamTaking";
 import Results from "./pages/Results";
 import NotFound from "./pages/NotFound";
 import Blog from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
 import StudyGuides from "./pages/StudyGuides";
 import ExamTips from "./pages/ExamTips";
 import Flashcards from "./pages/Flashcards";
@@ -36,6 +37,7 @@ const App = () => (
               <Route path="/exam/:examId" element={<ExamTaking />} />
               <Route path="/results" element={<Results />} />
               <Route path="/blog" element={<Blog />} />
+              <Route path="/blog/:blogId" element={<BlogPost />} />
               <Route path="/guides" element={<StudyGuides />} />
               <Route path="/tips" element={<ExamTips />} />
               <Route path="/flashcards" element={<Flashcards />} />
