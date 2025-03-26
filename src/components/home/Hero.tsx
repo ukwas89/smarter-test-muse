@@ -83,6 +83,47 @@ const Hero = () => {
             </Button>
           </motion.div>
           
+          {/* RBT Exam Information Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+            className="max-w-3xl mx-auto bg-white rounded-xl p-6 shadow-sm border border-blue-100 mt-10 mb-8"
+          >
+            <h2 className="text-2xl font-bold text-slate-900 mb-4">Understanding the RBT Certification Examination</h2>
+            <div className="text-left text-slate-700">
+              <p className="mb-4">
+                The Registered Behavior Technician (RBT) certification examination represents a pivotal milestone in your behavior analysis career journey. Following completion of the mandatory 40-hour training program and fulfillment of eligibility criteria, this assessment evaluates your readiness to apply behavioral principles in clinical settings.
+              </p>
+              <p className="mb-4">
+                This standardized evaluation spans 90 minutes and contains 85 questions, with only 75 being scored while 10 serve as field-test items for future examinations. The assessment comprehensively covers six essential competency domains:
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-2 mb-4">
+                <div className="bg-blue-50 p-3 rounded">
+                  <span className="font-semibold">Measurement Procedures:</span> 12 questions
+                </div>
+                <div className="bg-blue-50 p-3 rounded">
+                  <span className="font-semibold">Assessment Methodologies:</span> 6 questions
+                </div>
+                <div className="bg-blue-50 p-3 rounded">
+                  <span className="font-semibold">Skill Acquisition Techniques:</span> 24 questions
+                </div>
+                <div className="bg-blue-50 p-3 rounded">
+                  <span className="font-semibold">Behavior Reduction Strategies:</span> 12 questions
+                </div>
+                <div className="bg-blue-50 p-3 rounded">
+                  <span className="font-semibold">Documentation & Reporting:</span> 10 questions
+                </div>
+                <div className="bg-blue-50 p-3 rounded">
+                  <span className="font-semibold">Professional Ethics & Scope:</span> 11 questions
+                </div>
+              </div>
+              <p>
+                The examination follows a multiple-choice format with four potential responses per question. Research demonstrates that simulation practice significantly enhances examination performance. Begin your certification preparation today with our specially designed RBT practice assessments that mirror the actual examination structure and content distribution.
+              </p>
+            </div>
+          </motion.div>
+          
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
