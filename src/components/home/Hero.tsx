@@ -50,7 +50,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4"
+            className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8"
           >
             <Button asChild size="lg" className="w-full sm:w-auto font-medium">
               <Link to="/exams">
@@ -62,11 +62,32 @@ const Hero = () => {
             </Button>
           </motion.div>
           
+          {/* Practice Exam Buttons */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            className="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-2xl mx-auto mb-10"
+          >
+            <Button asChild variant="secondary" size="lg" className="w-full">
+              <Link to="/exam/1">Practice Exam 1</Link>
+            </Button>
+            <Button asChild variant="secondary" size="lg" className="w-full">
+              <Link to="/exam/2">Practice Exam 2</Link>
+            </Button>
+            <Button asChild variant="secondary" size="lg" className="w-full">
+              <Link to="/exam/3">Practice Exam 3</Link>
+            </Button>
+            <Button asChild variant="secondary" size="lg" className="w-full">
+              <Link to="/exam/4">Practice Exam 4</Link>
+            </Button>
+          </motion.div>
+          
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.5 }}
-            className="mt-14 text-sm text-slate-500 flex flex-wrap justify-center gap-6 items-center"
+            className="mt-6 text-sm text-slate-500 flex flex-wrap justify-center gap-6 items-center"
           >
             <p>Trusted by thousands of RBT candidates</p>
             <div className="flex space-x-1">
