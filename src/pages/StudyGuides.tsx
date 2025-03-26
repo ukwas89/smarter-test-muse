@@ -7,6 +7,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { toast } from "sonner";
 
 const studyGuides = [
   {
@@ -18,6 +19,7 @@ const studyGuides = [
     pages: 45,
     updated: "January 2023",
     icon: <FileText className="h-10 w-10 text-primary" />,
+    filename: "rbt-task-list-study-guide.pdf"
   },
   {
     id: 2,
@@ -28,6 +30,7 @@ const studyGuides = [
     pages: 28,
     updated: "March 2023",
     icon: <BookOpen className="h-10 w-10 text-primary" />,
+    filename: "behavioral-terminology-glossary.pdf"
   },
   {
     id: 3,
@@ -38,6 +41,7 @@ const studyGuides = [
     pages: 32,
     updated: "April 2023",
     icon: <FileText className="h-10 w-10 text-primary" />,
+    filename: "measurement-assessment-guide.pdf"
   },
   {
     id: 4,
@@ -48,6 +52,7 @@ const studyGuides = [
     pages: 36,
     updated: "June 2023",
     icon: <BookOpen className="h-10 w-10 text-primary" />,
+    filename: "behavior-reduction-strategies.pdf"
   },
   {
     id: 5,
@@ -58,6 +63,7 @@ const studyGuides = [
     pages: 38,
     updated: "August 2023",
     icon: <FileText className="h-10 w-10 text-primary" />,
+    filename: "skill-acquisition-procedures.pdf"
   },
   {
     id: 6,
@@ -68,12 +74,25 @@ const studyGuides = [
     pages: 25,
     updated: "October 2023",
     icon: <BookOpen className="h-10 w-10 text-primary" />,
+    filename: "professional-ethics-for-rbts.pdf"
   },
 ];
 
 const categories = ["All", "Core Concepts", "Terminology", "Techniques", "Strategies", "Ethics"];
 
 const StudyGuides = () => {
+  const handleDownload = (guide: typeof studyGuides[0]) => {
+    // In a real application, this would initiate a file download
+    // Since we don't have actual PDF files in this demo, we'll show a toast notification
+    toast.success(`Download started for: ${guide.title}`, {
+      description: `${guide.format} file (${guide.pages} pages)`,
+      duration: 3000,
+    });
+    
+    // Simulate download analytics tracking
+    console.log(`Guide downloaded: ${guide.title}, Category: ${guide.category}`);
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -133,7 +152,10 @@ const StudyGuides = () => {
                           </div>
                         </CardContent>
                         <CardFooter className="mt-auto pt-4">
-                          <Button className="w-full">
+                          <Button 
+                            className="w-full"
+                            onClick={() => handleDownload(guide)}
+                          >
                             <Download size={16} className="mr-2" />
                             Download Guide
                           </Button>
