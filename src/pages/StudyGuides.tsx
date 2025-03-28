@@ -8,6 +8,7 @@ import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { toast } from "sonner";
+import { useEffect } from "react";
 
 const studyGuides = [
   {
@@ -81,16 +82,47 @@ const studyGuides = [
 const categories = ["All", "Core Concepts", "Terminology", "Techniques", "Strategies", "Ethics"];
 
 const StudyGuides = () => {
-  const handleDownload = (guide: typeof studyGuides[0]) => {
-    // In a real application, this would initiate a file download
-    // Since we don't have actual PDF files in this demo, we'll show a toast notification
-    toast.success(`Download started for: ${guide.title}`, {
-      description: `${guide.format} file (${guide.pages} pages)`,
-      duration: 3000,
+  // Preload PDF files when the component mounts
+  useEffect(() => {
+    studyGuides.forEach(guide => {
+      const link = document.createElement('link');
+      link.rel = 'prefetch';
+      link.href = `/study-guides/${guide.filename}`;
+      link.as = 'fetch';
+      document.head.appendChild(link);
     });
-    
-    // Simulate download analytics tracking
-    console.log(`Guide downloaded: ${guide.title}, Category: ${guide.category}`);
+  }, []);
+
+  const handleDownload = (guide: typeof studyGuides[0]) => {
+    try {
+      // Create a download link
+      const link = document.createElement('a');
+      link.href = `/study-guides/${guide.filename}`;
+      link.download = guide.filename;
+      document.body.appendChild(link);
+      
+      // Trigger the download
+      link.click();
+      
+      // Clean up
+      document.body.removeChild(link);
+      
+      // Show success notification
+      toast.success(`Downloading: ${guide.title}`, {
+        description: `${guide.format} file (${guide.pages} pages)`,
+        duration: 3000,
+      });
+      
+      // Log download for analytics
+      console.log(`Guide downloaded: ${guide.title}, Category: ${guide.category}`);
+    } catch (error) {
+      // Show error notification if download fails
+      toast.error(`Download failed: ${guide.title}`, {
+        description: "The file couldn't be downloaded. Please try again later.",
+        duration: 5000,
+      });
+      console.error("Download error:", error);
+    }
   };
 
   return (
