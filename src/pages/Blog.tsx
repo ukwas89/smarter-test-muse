@@ -37,7 +37,7 @@ const Blog = () => {
                 "url": "https://practicerbtexam.com",
                 "logo": {
                   "@type": "ImageObject",
-                  "url": "https://practicerbtexam.com/logo.png"
+                  "url": "https://practicerbtexam.com/lovable-uploads/5eae210c-3b37-447e-bdfc-75f728932f7b.png"
                 }
               },
               "blogPost": [

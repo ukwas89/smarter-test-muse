@@ -44,7 +44,7 @@ const Index = () => {
               "@type": "Organization",
               "name": "PracticeRBTExam.com",
               "url": "https://practicerbtexam.com",
-              "logo": "https://practicerbtexam.com/logo.png",
+              "logo": "https://practicerbtexam.com/lovable-uploads/5eae210c-3b37-447e-bdfc-75f728932f7b.png",
               "sameAs": [
                 "https://facebook.com/practicerbtexam",
                 "https://twitter.com/practicerbtexam",
