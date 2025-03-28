@@ -124,22 +124,7 @@ const Hero = () => {
             </div>
           </motion.div>
           
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.5 }}
-            className="mt-6 text-sm text-slate-500 flex flex-wrap justify-center gap-6 items-center"
-          >
-            <p>Trusted by thousands of RBT candidates</p>
-            <div className="flex space-x-1">
-              {[1, 2, 3, 4, 5].map((star) => (
-                <svg key={star} xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FFB400" viewBox="0 0 16 16">
-                  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                </svg>
-              ))}
-            </div>
-            <p>4.9/5 rating from 2,000+ RBT exam candidates</p>
-          </motion.div>
+          
         </div>
       </div>
     </section>
