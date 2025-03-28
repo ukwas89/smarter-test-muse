@@ -14,6 +14,7 @@ import NotFound from "./pages/NotFound";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import StudyGuides from "./pages/StudyGuides";
+import StudyGuideDetail from "./pages/StudyGuideDetail";
 import ExamTips from "./pages/ExamTips";
 import Flashcards from "./pages/Flashcards";
 import Faq from "./pages/Faq";
@@ -39,6 +40,7 @@ const App = () => (
               <Route path="/blog" element={<Blog />} />
               <Route path="/blog/:blogId" element={<BlogPost />} />
               <Route path="/guides" element={<StudyGuides />} />
+              <Route path="/guides/:guideId" element={<StudyGuideDetail />} />
               <Route path="/tips" element={<ExamTips />} />
               <Route path="/flashcards" element={<Flashcards />} />
               <Route path="/faq" element={<Faq />} />

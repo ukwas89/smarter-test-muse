@@ -1,130 +1,16 @@
 
 import { motion } from "framer-motion";
-import { Download, GraduationCap, FileText, BookOpen } from "lucide-react";
+import { Download, GraduationCap, ArrowRight } from "lucide-react";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { toast } from "sonner";
-import { useEffect } from "react";
-
-const studyGuides = [
-  {
-    id: 1,
-    title: "RBT Task List Study Guide",
-    description: "A comprehensive breakdown of the RBT Task List with detailed explanations of each item.",
-    category: "Core Concepts",
-    format: "PDF",
-    pages: 45,
-    updated: "January 2023",
-    icon: <FileText className="h-10 w-10 text-primary" />,
-    filename: "rbt-task-list-study-guide.pdf"
-  },
-  {
-    id: 2,
-    title: "Behavioral Terminology Glossary",
-    description: "An extensive glossary of behavioral terms and concepts that appear on the RBT exam.",
-    category: "Terminology",
-    format: "PDF",
-    pages: 28,
-    updated: "March 2023",
-    icon: <BookOpen className="h-10 w-10 text-primary" />,
-    filename: "behavioral-terminology-glossary.pdf"
-  },
-  {
-    id: 3,
-    title: "Measurement and Assessment Guide",
-    description: "Learn about the various measurement procedures and assessment strategies used in ABA.",
-    category: "Techniques",
-    format: "PDF",
-    pages: 32,
-    updated: "April 2023",
-    icon: <FileText className="h-10 w-10 text-primary" />,
-    filename: "measurement-assessment-guide.pdf"
-  },
-  {
-    id: 4,
-    title: "Behavior Reduction Strategies",
-    description: "A detailed guide to understanding and implementing behavior reduction procedures.",
-    category: "Strategies",
-    format: "PDF",
-    pages: 36,
-    updated: "June 2023",
-    icon: <BookOpen className="h-10 w-10 text-primary" />,
-    filename: "behavior-reduction-strategies.pdf"
-  },
-  {
-    id: 5,
-    title: "Skill Acquisition Procedures",
-    description: "Comprehensive explanations of skill acquisition procedures with examples and practice questions.",
-    category: "Techniques",
-    format: "PDF",
-    pages: 38,
-    updated: "August 2023",
-    icon: <FileText className="h-10 w-10 text-primary" />,
-    filename: "skill-acquisition-procedures.pdf"
-  },
-  {
-    id: 6,
-    title: "Professional Ethics for RBTs",
-    description: "An in-depth guide to ethical practices and considerations for Registered Behavior Technicians.",
-    category: "Ethics",
-    format: "PDF",
-    pages: 25,
-    updated: "October 2023",
-    icon: <BookOpen className="h-10 w-10 text-primary" />,
-    filename: "professional-ethics-for-rbts.pdf"
-  },
-];
-
-const categories = ["All", "Core Concepts", "Terminology", "Techniques", "Strategies", "Ethics"];
+import { Link } from "react-router-dom";
+import { studyGuides, categories } from "@/data/studyGuides";
 
 const StudyGuides = () => {
-  // Preload PDF files when the component mounts
-  useEffect(() => {
-    studyGuides.forEach(guide => {
-      const link = document.createElement('link');
-      link.rel = 'prefetch';
-      link.href = `/study-guides/${guide.filename}`;
-      link.as = 'fetch';
-      document.head.appendChild(link);
-    });
-  }, []);
-
-  const handleDownload = (guide: typeof studyGuides[0]) => {
-    try {
-      // Create a download link
-      const link = document.createElement('a');
-      link.href = `/study-guides/${guide.filename}`;
-      link.download = guide.filename;
-      document.body.appendChild(link);
-      
-      // Trigger the download
-      link.click();
-      
-      // Clean up
-      document.body.removeChild(link);
-      
-      // Show success notification
-      toast.success(`Downloading: ${guide.title}`, {
-        description: `${guide.format} file (${guide.pages} pages)`,
-        duration: 3000,
-      });
-      
-      // Log download for analytics
-      console.log(`Guide downloaded: ${guide.title}, Category: ${guide.category}`);
-    } catch (error) {
-      // Show error notification if download fails
-      toast.error(`Download failed: ${guide.title}`, {
-        description: "The file couldn't be downloaded. Please try again later.",
-        duration: 5000,
-      });
-      console.error("Download error:", error);
-    }
-  };
-
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -183,13 +69,25 @@ const StudyGuides = () => {
                             </div>
                           </div>
                         </CardContent>
-                        <CardFooter className="mt-auto pt-4">
+                        <CardFooter className="mt-auto pt-4 gap-3">
                           <Button 
                             className="w-full"
-                            onClick={() => handleDownload(guide)}
+                            variant="outline"
+                            asChild
                           >
-                            <Download size={16} className="mr-2" />
-                            Download Guide
+                            <Link to={`/guides/${guide.id}`}>
+                              View Details
+                              <ArrowRight size={16} className="ml-2" />
+                            </Link>
+                          </Button>
+                          <Button 
+                            className="w-full"
+                            asChild
+                          >
+                            <Link to={`/guides/${guide.id}`}>
+                              <Download size={16} className="mr-2" />
+                              Download
+                            </Link>
                           </Button>
                         </CardFooter>
                       </Card>
@@ -209,7 +107,7 @@ const StudyGuides = () => {
               try our free RBT practice exams!
             </p>
             <Button asChild size="lg">
-              <a href="/exams">Take a Practice Exam</a>
+              <Link to="/exams">Take a Practice Exam</Link>
             </Button>
           </div>
         </div>
