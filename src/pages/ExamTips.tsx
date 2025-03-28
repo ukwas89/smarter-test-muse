@@ -1,5 +1,6 @@
 
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 import { Lightbulb, CheckCircle, AlertCircle, Clock, Calendar, BookOpen } from "lucide-react";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
@@ -130,6 +131,49 @@ const ExamTips = () => {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
+      <Helmet>
+        <title>RBT Exam Tips and Strategies | Pass Your 2025 Certification | PracticeRBTExam.com</title>
+        <meta name="description" content="Expert tips and strategies to help you pass your 2025 RBT certification exam. Learn effective study techniques, time management, and key content areas to focus on." />
+        <meta name="keywords" content="RBT exam tips, RBT test strategies, how to pass RBT exam, RBT certification advice, RBT study tips, 2025 RBT exam preparation, RBT test taking skills" />
+        <link rel="canonical" href="https://practicerbtexam.com/tips" />
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "HowTo",
+              "name": "How to Pass Your RBT Certification Exam",
+              "description": "Expert strategies and tips for passing the Registered Behavior Technician certification exam",
+              "url": "https://practicerbtexam.com/tips",
+              "publisher": {
+                "@type": "Organization",
+                "name": "PracticeRBTExam.com",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://practicerbtexam.com/lovable-uploads/5eae210c-3b37-447e-bdfc-75f728932f7b.png"
+                }
+              },
+              "step": [
+                {
+                  "@type": "HowToStep",
+                  "name": "Before the Exam",
+                  "text": "Create a study schedule, review the task list, take practice tests, avoid cramming, and form a study group."
+                },
+                {
+                  "@type": "HowToStep",
+                  "name": "During the Exam",
+                  "text": "Read carefully, pace yourself, look for context clues, avoid second-guessing, and use the process of elimination."
+                },
+                {
+                  "@type": "HowToStep",
+                  "name": "Important Content Areas",
+                  "text": "Focus on ethics, understand measurement, master skill acquisition, know behavior reduction, and learn documentation requirements."
+                }
+              ]
+            }
+          `}
+        </script>
+      </Helmet>
+
       <Navbar />
 
       <main className="container mx-auto px-4 py-24 min-h-screen">

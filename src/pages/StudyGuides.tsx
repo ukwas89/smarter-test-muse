@@ -1,5 +1,6 @@
 
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 import { Download, GraduationCap, ArrowRight } from "lucide-react";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
@@ -18,6 +19,43 @@ const StudyGuides = () => {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
+      <Helmet>
+        <title>Free RBT Study Guides | 2025 Exam Preparation Materials | PracticeRBTExam.com</title>
+        <meta name="description" content="Download free RBT study guides for your 2025 certification exam. Our comprehensive materials cover all task list areas including ethics, measurement, and behavior reduction strategies." />
+        <meta name="keywords" content="RBT study guides, free RBT materials, RBT task list, behavior reduction strategies, RBT terminology, measurement procedures, RBT ethics, 2025 RBT exam" />
+        <link rel="canonical" href="https://practicerbtexam.com/guides" />
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "CollectionPage",
+              "headline": "Free RBT Study Guides and Materials",
+              "description": "Access our collection of free study guides designed to help you prepare for the RBT certification exam.",
+              "url": "https://practicerbtexam.com/guides",
+              "publisher": {
+                "@type": "Organization",
+                "name": "PracticeRBTExam.com",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://practicerbtexam.com/lovable-uploads/5eae210c-3b37-447e-bdfc-75f728932f7b.png"
+                }
+              },
+              "mainEntity": {
+                "@type": "ItemList",
+                "itemListElement": [
+                  ${studyGuides.map((guide, index) => `{
+                    "@type": "ListItem",
+                    "position": ${index + 1},
+                    "url": "https://practicerbtexam.com/guides/${guide.id}",
+                    "name": "${guide.title}"
+                  }`).join(',')}
+                ]
+              }
+            }
+          `}
+        </script>
+      </Helmet>
+
       <Navbar />
 
       <main className="container mx-auto px-4 py-24 min-h-screen">

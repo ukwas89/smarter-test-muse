@@ -1,5 +1,6 @@
 
 import { useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import ExamList from '@/components/exam/ExamList';
@@ -12,6 +13,39 @@ const ExamSelection = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <Helmet>
+        <title>Free RBT Practice Exams | 2025 Certification Test Prep | PracticeRBTExam.com</title>
+        <meta name="description" content="Take free RBT practice exams to prepare for your 2025 certification. Our mock tests simulate the real exam format with updated questions reflecting the current task list." />
+        <meta name="keywords" content="RBT practice exam, free RBT test, RBT certification prep, RBT mock exam, 2025 RBT exam questions, registered behavior technician test, BACB exam practice" />
+        <link rel="canonical" href="https://practicerbtexam.com/exams" />
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "ItemPage",
+              "name": "RBT Practice Exams",
+              "description": "Choose from our collection of practice exams designed to help you prepare for your RBT certification.",
+              "url": "https://practicerbtexam.com/exams",
+              "isPartOf": {
+                "@type": "WebSite",
+                "name": "PracticeRBTExam.com",
+                "url": "https://practicerbtexam.com"
+              },
+              "mainEntity": {
+                "@type": "LearningResource",
+                "name": "RBT Practice Exams",
+                "description": "Free practice exams for RBT certification preparation",
+                "educationalUse": ["Practice", "Assessment"],
+                "audience": {
+                  "@type": "Audience",
+                  "audienceType": "RBT candidates"
+                }
+              }
+            }
+          `}
+        </script>
+      </Helmet>
+
       <Navbar />
       <main className="flex-grow pt-32 pb-16">
         <motion.div

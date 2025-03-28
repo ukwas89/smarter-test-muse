@@ -1,6 +1,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 import { HelpCircle, Search, MessageCircle } from "lucide-react";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
@@ -133,6 +134,33 @@ const Faq = () => {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
+      <Helmet>
+        <title>RBT Exam FAQs | Common Questions About 2025 Certification | PracticeRBTExam.com</title>
+        <meta name="description" content="Find answers to frequently asked questions about the RBT exam, certification process, and study strategies. Get expert advice for your 2025 RBT certification journey." />
+        <meta name="keywords" content="RBT exam FAQ, RBT certification questions, registered behavior technician FAQ, 2025 RBT exam help, RBT test preparation FAQ, BACB certification questions" />
+        <link rel="canonical" href="https://practicerbtexam.com/faq" />
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "mainEntity": [
+                ${faqCategories.flatMap(category => 
+                  category.faqs.map(faq => `{
+                    "@type": "Question",
+                    "name": "${faq.question}",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "${faq.answer.replace(/"/g, '\\"')}"
+                    }
+                  }`
+                )).join(',')}
+              ]
+            }
+          `}
+        </script>
+      </Helmet>
+
       <Navbar />
 
       <main className="container mx-auto px-4 py-24 min-h-screen">
