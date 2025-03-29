@@ -25,11 +25,10 @@ if ('requestIdleCallback' in window) {
 
 // Detect connection speed for adaptive loading
 let connectionSpeed = 'high';
-if ('connection' in navigator) {
-  const connection = (navigator as any).connection;
-  if (connection && (connection.saveData || 
-      connection.effectiveType === '2g' || 
-      connection.effectiveType === 'slow-2g')) {
+if ('connection' in navigator && navigator.connection) {
+  if (navigator.connection.saveData || 
+      navigator.connection.effectiveType === '2g' || 
+      navigator.connection.effectiveType === 'slow-2g') {
     connectionSpeed = 'low';
     document.documentElement.classList.add('slow-connection');
   }

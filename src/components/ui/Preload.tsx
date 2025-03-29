@@ -18,7 +18,7 @@ const Preload = () => {
     document.head.appendChild(link);
 
     // Only preconnect to non-critical domains on desktop or if not on slow connection
-    if (!isMobile || (navigator.connection && !(navigator.connection as any).saveData)) {
+    if (!isMobile || (navigator.connection && !navigator.connection.saveData)) {
       // Preconnect to critical domains
       const preconnectDomains = [
         'https://fonts.googleapis.com',
@@ -35,9 +35,9 @@ const Preload = () => {
     }
 
     // Detect slow connections and inform the app
-    if ('connection' in navigator) {
-      const connection = navigator.connection as any;
-      if (connection && (connection.saveData || connection.effectiveType.includes('2g'))) {
+    if ('connection' in navigator && navigator.connection) {
+      if (navigator.connection.saveData || 
+          navigator.connection.effectiveType.includes('2g')) {
         document.documentElement.classList.add('slow-connection');
       }
     }
