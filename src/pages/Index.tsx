@@ -8,6 +8,7 @@ import Features from '@/components/home/Features';
 import Testimonials from '@/components/home/Testimonials';
 import CallToAction from '@/components/home/CallToAction';
 import { motion } from 'framer-motion';
+import Preload from '@/components/ui/Preload';
 
 const Index = () => {
   useEffect(() => {
@@ -16,6 +17,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <Preload />
       <Helmet>
         <title>PracticeRBTExam.com | Free RBT Practice Exam & Test Preparation</title>
         <meta name="description" content="Pass your RBT exam with free practice tests and study materials from PracticeRBTExam.com. Our comprehensive RBT practice exams are designed by experts to prepare you for certification." />
@@ -89,7 +91,7 @@ const Index = () => {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.3 }}
         >
           <Hero />
           <Features />

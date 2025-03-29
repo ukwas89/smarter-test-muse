@@ -1,5 +1,5 @@
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, memo } from 'react';
 
 interface BlurImageProps {
   src: string;
@@ -16,6 +16,10 @@ const BlurImage = ({ src, alt, className = '' }: BlurImageProps) => {
     img.onload = () => {
       setIsLoaded(true);
     };
+    
+    return () => {
+      img.onload = null;
+    };
   }, [src]);
   
   return (
@@ -23,12 +27,14 @@ const BlurImage = ({ src, alt, className = '' }: BlurImageProps) => {
       <div 
         className={`w-full h-full bg-slate-100 absolute inset-0 ${
           isLoaded ? 'opacity-0' : 'opacity-100'
-        } transition-opacity duration-500 ease-in-out`}
+        } transition-opacity duration-300 ease-in-out`}
       />
       <img 
         src={src} 
-        alt={alt} 
-        className={`w-full h-full object-cover transition-opacity duration-500 ease-in-out ${
+        alt={alt}
+        loading="lazy"
+        decoding="async"
+        className={`w-full h-full object-cover transition-opacity duration-300 ease-in-out ${
           isLoaded ? 'opacity-100' : 'opacity-0'
         }`}
       />
@@ -36,4 +42,5 @@ const BlurImage = ({ src, alt, className = '' }: BlurImageProps) => {
   );
 };
 
-export default BlurImage;
+// Memoize component to prevent unnecessary re-renders
+export default memo(BlurImage);
