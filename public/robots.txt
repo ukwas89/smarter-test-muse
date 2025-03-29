@@ -3,6 +3,9 @@
 User-agent: *
 Allow: /
 
+# Explicitly allow search engines to access the sitemap
+Allow: /sitemap.xml
+
 # Disallow crawling of certain files types (unnecessary for most search engines)
 Disallow: /*.json$
 Disallow: /*.js$
