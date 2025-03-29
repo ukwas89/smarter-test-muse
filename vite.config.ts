@@ -28,15 +28,24 @@ export default defineConfig(({ mode }) => ({
         manualChunks: {
           react: ['react', 'react-dom'],
           vendor: ['framer-motion', 'recharts'],
-          ui: ['@radix-ui/react-toast', '@radix-ui/react-dialog']
+          ui: ['@radix-ui/react-toast', '@radix-ui/react-dialog'],
+          // Split router separately for better caching
+          router: ['react-router-dom'],
+          // Components by feature area
+          home: ['./src/components/home/Hero.tsx', './src/components/home/Features.tsx'],
         }
       }
     },
     terserOptions: {
       compress: {
         drop_console: true,
-        drop_debugger: true
+        drop_debugger: true,
+        pure_funcs: ['console.log']
       }
-    }
+    },
+    // Target modern browsers for smaller bundle sizes
+    target: 'es2018',
+    // Improve chunk loading
+    chunkSizeWarningLimit: 1000,
   },
 }));
