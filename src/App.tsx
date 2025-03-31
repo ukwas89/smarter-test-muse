@@ -3,9 +3,10 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import { HelmetProvider } from "react-helmet-async";
+import { useEffect } from "react";
 import Index from "./pages/Index";
 import ExamSelection from "./pages/ExamSelection";
 import ExamTaking from "./pages/ExamTaking";
@@ -22,6 +23,21 @@ import Contact from "./pages/Contact";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import About from "./pages/About";
 
+// Location change handler component
+const LocationHandler = () => {
+  const location = useLocation();
+  
+  useEffect(() => {
+    // Log route changes for debugging
+    console.log(`Route changed to: ${location.pathname}`);
+    
+    // Scroll to top on route change
+    window.scrollTo(0, 0);
+  }, [location]);
+  
+  return null;
+};
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -31,6 +47,7 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          <LocationHandler />
           <AnimatePresence mode="wait">
             <Routes>
               <Route path="/" element={<Index />} />

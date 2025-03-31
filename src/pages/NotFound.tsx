@@ -1,18 +1,50 @@
 
-import { useLocation, Link } from "react-router-dom";
-import { useEffect } from "react";
+import { useLocation, Link, Navigate } from "react-router-dom";
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Home } from "lucide-react";
+import { studyGuides } from "@/data/studyGuides";
 
 const NotFound = () => {
   const location = useLocation();
-
+  const [shouldRedirect, setShouldRedirect] = useState<string | null>(null);
+  
   useEffect(() => {
     console.error(
       "404 Error: User attempted to access non-existent route:",
       location.pathname
     );
+    
+    // Try to intelligently redirect based on path pattern
+    const path = location.pathname;
+    
+    // Check if it's a guide path with a numeric ID
+    if (path.match(/^\/guides\/\d+$/)) {
+      const guideId = parseInt(path.split('/').pop() || '0', 10);
+      const guideExists = studyGuides.some(guide => guide.id === guideId);
+      
+      if (guideExists) {
+        console.log(`Guide ${guideId} exists, redirecting...`);
+        setShouldRedirect(path);
+        return;
+      }
+    }
+    
+    // Check if it's a common page route
+    const commonRoutes = ['/contact', '/about', '/tips', '/flashcards', '/faq', '/privacy-policy'];
+    if (commonRoutes.includes(path)) {
+      console.log(`Common route ${path} detected, redirecting...`);
+      setShouldRedirect(path);
+      return;
+    }
+    
+    // Add other intelligent redirects here as needed
   }, [location.pathname]);
+  
+  // Handle potential redirect
+  if (shouldRedirect) {
+    return <Navigate to={shouldRedirect} replace />;
+  }
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">

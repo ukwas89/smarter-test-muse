@@ -28,6 +28,28 @@ const addPreconnect = () => {
 // Add preconnect links immediately
 addPreconnect();
 
+// Helper function to detect and log direct navigation to specific routes
+const logDirectNavigation = () => {
+  const path = window.location.pathname;
+  const isDirectNavigation = document.referrer === '';
+  
+  if (isDirectNavigation && path !== '/') {
+    console.log(`Direct navigation detected to: ${path}`);
+  }
+  
+  // Pre-warm route data for known direct paths
+  if (path.startsWith('/guides/') || path.startsWith('/exams/') || path.startsWith('/blog/')) {
+    const id = path.split('/').pop();
+    if (id) {
+      console.log(`Pre-warming data for ${path}`);
+      // This would be a good place to prefetch data if needed
+    }
+  }
+};
+
+// Call immediately
+logDirectNavigation();
+
 // Dynamically import App for better chunking
 const App = lazy(() => import('./App.tsx'));
 

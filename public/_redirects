@@ -1,2 +1,14 @@
 
-/* /index.html 200
+# Redirects all routes to index.html for client-side routing
+/*    /index.html   200
+
+# Specific redirects for common paths
+/guides/*    /index.html   200
+/exams/*     /index.html   200
+/blog/*      /index.html   200
+/contact     /index.html   200
+/about       /index.html   200
+/tips        /index.html   200
+/flashcards  /index.html   200
+/faq         /index.html   200
+/privacy-policy  /index.html   200
