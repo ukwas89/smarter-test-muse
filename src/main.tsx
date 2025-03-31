@@ -7,6 +7,27 @@ import './index.css'
 const rootElement = document.getElementById("root");
 const root = rootElement ? createRoot(rootElement) : null;
 
+// Add font preconnect links
+const addPreconnect = () => {
+  const links = [
+    { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+    { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: "anonymous" }
+  ];
+  
+  links.forEach(linkData => {
+    const link = document.createElement('link');
+    Object.entries(linkData).forEach(([key, value]) => {
+      if (value !== undefined) {
+        link[key] = value;
+      }
+    });
+    document.head.appendChild(link);
+  });
+};
+
+// Add preconnect links immediately
+addPreconnect();
+
 // Dynamically import App for better chunking
 const App = lazy(() => import('./App.tsx'));
 
