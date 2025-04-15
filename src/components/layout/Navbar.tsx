@@ -102,6 +102,9 @@ const NavLinks = () => (
     <Link to="/exams" className="text-sm font-medium text-slate-700 hover:text-primary transition-colors">
       Practice Exams
     </Link>
+    <Link to="/sample-rbt-exam" className="text-sm font-medium text-slate-700 hover:text-primary transition-colors">
+      Sample RBT Exam
+    </Link>
     <Link to="/guides" className="text-sm font-medium text-slate-700 hover:text-primary transition-colors">
       Study Guides
     </Link>
@@ -118,6 +121,9 @@ const MobileNavLinks = () => (
     </Link>
     <Link to="/exams" className="text-base font-medium text-slate-900 py-2">
       Practice Exams
+    </Link>
+    <Link to="/sample-rbt-exam" className="text-base font-medium text-slate-900 py-2">
+      Sample RBT Exam
     </Link>
     <Link to="/guides" className="text-base font-medium text-slate-900 py-2">
       Study Guides

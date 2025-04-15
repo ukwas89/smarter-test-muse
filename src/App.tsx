@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -22,16 +21,13 @@ import Faq from "./pages/Faq";
 import Contact from "./pages/Contact";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import About from "./pages/About";
+import SampleRBTExam from "./pages/SampleRBTExam";
 
-// Location change handler component
 const LocationHandler = () => {
   const location = useLocation();
   
   useEffect(() => {
-    // Log route changes for debugging
     console.log(`Route changed to: ${location.pathname}`);
-    
-    // Scroll to top on route change
     window.scrollTo(0, 0);
   }, [location]);
   
@@ -64,6 +60,7 @@ const App = () => (
               <Route path="/contact" element={<Contact />} />
               <Route path="/privacy-policy" element={<PrivacyPolicy />} />
               <Route path="/about" element={<About />} />
+              <Route path="/sample-rbt-exam" element={<SampleRBTExam />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </AnimatePresence>

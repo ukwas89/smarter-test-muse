@@ -4,7 +4,7 @@
   <!-- Home Page -->
   <url>
     <loc>https://practicerbtexam.com/</loc>
-    <lastmod>2023-07-10</lastmod>
+    <lastmod>2025-04-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -12,37 +12,43 @@
   <!-- Main Navigation Pages -->
   <url>
     <loc>https://practicerbtexam.com/exams</loc>
-    <lastmod>2023-07-10</lastmod>
+    <lastmod>2025-04-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://practicerbtexam.com/sample-rbt-exam</loc>
+    <lastmod>2025-04-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://practicerbtexam.com/guides</loc>
-    <lastmod>2023-07-10</lastmod>
+    <lastmod>2025-04-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://practicerbtexam.com/tips</loc>
-    <lastmod>2023-07-10</lastmod>
+    <lastmod>2025-04-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://practicerbtexam.com/flashcards</loc>
-    <lastmod>2023-07-10</lastmod>
+    <lastmod>2025-04-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://practicerbtexam.com/blog</loc>
-    <lastmod>2023-07-10</lastmod>
+    <lastmod>2025-04-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://practicerbtexam.com/faq</loc>
-    <lastmod>2023-07-10</lastmod>
+    <lastmod>2025-04-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -50,37 +56,37 @@
   <!-- Study Guides Pages -->
   <url>
     <loc>https://practicerbtexam.com/guides/1</loc>
-    <lastmod>2023-07-10</lastmod>
+    <lastmod>2025-04-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://practicerbtexam.com/guides/2</loc>
-    <lastmod>2023-07-10</lastmod>
+    <lastmod>2025-04-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://practicerbtexam.com/guides/3</loc>
-    <lastmod>2023-07-10</lastmod>
+    <lastmod>2025-04-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://practicerbtexam.com/guides/4</loc>
-    <lastmod>2023-07-10</lastmod>
+    <lastmod>2025-04-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://practicerbtexam.com/guides/5</loc>
-    <lastmod>2023-07-10</lastmod>
+    <lastmod>2025-04-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://practicerbtexam.com/guides/6</loc>
-    <lastmod>2023-07-10</lastmod>
+    <lastmod>2025-04-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -88,37 +94,37 @@
   <!-- Blog Posts -->
   <url>
     <loc>https://practicerbtexam.com/blog/1</loc>
-    <lastmod>2023-07-10</lastmod>
+    <lastmod>2025-04-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://practicerbtexam.com/blog/2</loc>
-    <lastmod>2023-07-10</lastmod>
+    <lastmod>2025-04-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://practicerbtexam.com/blog/3</loc>
-    <lastmod>2023-07-10</lastmod>
+    <lastmod>2025-04-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://practicerbtexam.com/blog/4</loc>
-    <lastmod>2023-07-10</lastmod>
+    <lastmod>2025-04-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://practicerbtexam.com/blog/5</loc>
-    <lastmod>2023-07-10</lastmod>
+    <lastmod>2025-04-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://practicerbtexam.com/blog/6</loc>
-    <lastmod>2023-07-10</lastmod>
+    <lastmod>2025-04-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -126,19 +132,19 @@
   <!-- Information Pages -->
   <url>
     <loc>https://practicerbtexam.com/about</loc>
-    <lastmod>2023-07-10</lastmod>
+    <lastmod>2025-04-15</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://practicerbtexam.com/contact</loc>
-    <lastmod>2023-07-10</lastmod>
+    <lastmod>2025-04-15</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://practicerbtexam.com/privacy-policy</loc>
-    <lastmod>2023-07-10</lastmod>
+    <lastmod>2025-04-15</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
