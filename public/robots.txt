@@ -6,15 +6,8 @@ Allow: /
 # Explicitly allow search engines to access the sitemap
 Allow: /sitemap.xml
 
-# Disallow crawling of certain files types (unnecessary for most search engines)
-Disallow: /*.json$
-Disallow: /*.js$
-Disallow: /*.css$
-
-# Set reasonable crawl rate
-Crawl-delay: 1
-
-# Important pages to prioritize in crawling
+# Explicitly allow important content pages
+Allow: /sample-rbt-exam
 Allow: /exams
 Allow: /guides
 Allow: /blog
@@ -22,6 +15,14 @@ Allow: /tips
 Allow: /faq
 Allow: /about
 Allow: /contact
+
+# Disallow crawling of certain files types (unnecessary for most search engines)
+Disallow: /*.json$
+Disallow: /*.js$
+Disallow: /*.css$
+
+# Set reasonable crawl rate
+Crawl-delay: 1
 
 # Sitemap location
 Sitemap: https://practicerbtexam.com/sitemap.xml

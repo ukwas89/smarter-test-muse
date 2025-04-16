@@ -25,11 +25,40 @@ const SampleRBTExam = () => {
           name="keywords" 
           content="sample RBT exam, free RBT practice test, RBT certification sample, RBT exam questions, registered behavior technician sample test" 
         />
+        <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://practicerbtexam.com/sample-rbt-exam" />
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "WebPage",
+              "name": "Sample RBT Exam",
+              "description": "Free practice test for Registered Behavior Technician (RBT) exam preparation.",
+              "publisher": {
+                "@type": "Organization",
+                "name": "PracticeRBTExam.com",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://practicerbtexam.com/lovable-uploads/5eae210c-3b37-447e-bdfc-75f728932f7b.png"
+                }
+              },
+              "mainEntity": {
+                "@type": "LearningResource",
+                "name": "RBT Practice Exam",
+                "educationalLevel": "professional certification",
+                "audience": {
+                  "@type": "Audience",
+                  "audienceType": "RBT certification candidates"
+                },
+                "learningResourceType": "practice test"
+              }
+            }
+          `}
+        </script>
       </Helmet>
 
       <Navbar />
-      <main className="flex-grow pt-32 pb-16">
+      <main className="flex-grow pt-32 pb-16" id="main-content" role="main" aria-label="Sample RBT Exam Content">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
