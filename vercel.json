@@ -4,6 +4,7 @@
     { "source": "/(.*)", "destination": "/index.html" }
   ],
   "routes": [
+    { "src": "/sitemap.xml", "dest": "/sitemap.xml" },
     { "src": "/guides/[0-9]+", "dest": "/index.html" },
     { "src": "/exams/[^/]+", "dest": "/index.html" },
     { "src": "/blog/[^/]+", "dest": "/index.html" },
