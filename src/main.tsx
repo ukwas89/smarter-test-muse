@@ -11,7 +11,8 @@ const root = rootElement ? createRoot(rootElement) : null;
 const addPreconnect = () => {
   const links = [
     { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-    { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: "anonymous" }
+    { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: "anonymous" },
+    { rel: 'preload', href: '/sitemap.xml', as: 'fetch', crossOrigin: "anonymous" }
   ];
   
   links.forEach(linkData => {

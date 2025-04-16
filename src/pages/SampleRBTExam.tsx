@@ -27,6 +27,15 @@ const SampleRBTExam = () => {
         />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://practicerbtexam.com/sample-rbt-exam" />
+        <meta property="og:title" content="Sample RBT Exam | Free Practice Test" />
+        <meta property="og:description" content="Prepare for your RBT certification with our free sample exam. Includes detailed explanations and follows the latest BACB task list." />
+        <meta property="og:url" content="https://practicerbtexam.com/sample-rbt-exam" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://practicerbtexam.com/lovable-uploads/5eae210c-3b37-447e-bdfc-75f728932f7b.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Sample RBT Exam | Free Practice Test" />
+        <meta name="twitter:description" content="Prepare for your RBT certification with our free sample exam. Includes detailed explanations and follows the latest BACB task list." />
+        <meta name="twitter:image" content="https://practicerbtexam.com/lovable-uploads/5eae210c-3b37-447e-bdfc-75f728932f7b.png" />
         <script type="application/ld+json">
           {`
             {
@@ -34,6 +43,7 @@ const SampleRBTExam = () => {
               "@type": "WebPage",
               "name": "Sample RBT Exam",
               "description": "Free practice test for Registered Behavior Technician (RBT) exam preparation.",
+              "url": "https://practicerbtexam.com/sample-rbt-exam",
               "publisher": {
                 "@type": "Organization",
                 "name": "PracticeRBTExam.com",
@@ -51,6 +61,23 @@ const SampleRBTExam = () => {
                   "audienceType": "RBT certification candidates"
                 },
                 "learningResourceType": "practice test"
+              },
+              "breadcrumb": {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                  {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://practicerbtexam.com/"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Sample RBT Exam",
+                    "item": "https://practicerbtexam.com/sample-rbt-exam"
+                  }
+                ]
               }
             }
           `}

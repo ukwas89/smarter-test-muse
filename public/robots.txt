@@ -6,10 +6,8 @@ Allow: /
 # Explicitly allow search engines to access the sitemap
 Allow: /sitemap.xml
 
-# Explicitly encourage indexing of sample-rbt-exam page
+# Explicitly encourage indexing of important pages
 Allow: /sample-rbt-exam
-
-# Explicitly allow important content pages
 Allow: /exams
 Allow: /guides
 Allow: /blog
@@ -17,6 +15,7 @@ Allow: /tips
 Allow: /faq
 Allow: /about
 Allow: /contact
+Allow: /flashcards
 
 # Disallow crawling of certain files types (unnecessary for most search engines)
 Disallow: /*.json$
