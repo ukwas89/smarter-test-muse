@@ -10,5 +10,16 @@
     { "src": "/blog/[^/]+", "dest": "/index.html" },
     { "src": "/sample-rbt-exam", "dest": "/index.html" },
     { "src": "/(contact|about|tips|flashcards|faq|privacy-policy)", "dest": "/index.html" }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
+    }
   ]
 }
