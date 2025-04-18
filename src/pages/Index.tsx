@@ -1,4 +1,3 @@
-
 import { useEffect } from 'react';
 import { Helmet } from "react-helmet-async";
 import Navbar from '@/components/layout/Navbar';
@@ -24,7 +23,6 @@ const Index = () => {
         <title>PracticeRBTExam.com | Free RBT Practice Exam & Test Preparation</title>
         <meta name="description" content="Pass your RBT exam with free practice tests and study materials from PracticeRBTExam.com. Our comprehensive RBT practice exams are designed by experts to prepare you for certification." />
         <meta name="keywords" content="RBT practice exam, RBT test prep, free RBT exam, Registered Behavior Technician exam, RBT certification practice, BACB exam practice" />
-        <link rel="canonical" href="https://practicerbtexam.com" />
         <script type="application/ld+json">
           {`
             {

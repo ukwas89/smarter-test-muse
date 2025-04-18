@@ -1,10 +1,10 @@
-
 import { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import ExamList from '@/components/exam/ExamList';
 import { motion } from 'framer-motion';
+import CanonicalTag from '@/components/seo/CanonicalTag';
 
 const ExamSelection = () => {
   useEffect(() => {
@@ -13,6 +13,7 @@ const ExamSelection = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <CanonicalTag url="https://practicerbtexam.com/exams" />
       <Helmet>
         <title>Free RBT Practice Exams | 2025 Certification Test Prep | PracticeRBTExam.com</title>
         <meta name="description" content="Take free RBT practice exams to prepare for your 2025 certification. Our mock tests simulate the real exam format with updated questions reflecting the current task list." />

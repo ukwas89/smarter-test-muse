@@ -1,4 +1,3 @@
-
 import { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
@@ -28,7 +27,6 @@ const SampleRBTExam = () => {
           content="sample RBT exam, free RBT practice test, RBT certification sample, RBT exam questions, registered behavior technician sample test" 
         />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://practicerbtexam.com/sample-rbt-exam" />
         <meta property="og:title" content="Sample RBT Exam | Free Practice Test" />
         <meta property="og:description" content="Prepare for your RBT certification with our free sample exam. Includes detailed explanations and follows the latest BACB task list." />
         <meta property="og:url" content="https://practicerbtexam.com/sample-rbt-exam" />

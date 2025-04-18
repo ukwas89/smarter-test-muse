@@ -11,11 +11,10 @@ type CanonicalTagProps = {
  */
 const CanonicalTag: React.FC<CanonicalTagProps> = ({ url }) => {
   return (
-    <Helmet>
+    <Helmet prioritizeSeoTags>
       <link rel="canonical" href={url} />
     </Helmet>
   );
 };
 
 export default CanonicalTag;
-
