@@ -3,6 +3,7 @@ import { useLocation, Link, Navigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Home } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 import { studyGuides } from "@/data/studyGuides";
 
 const NotFound = () => {
@@ -48,6 +49,10 @@ const NotFound = () => {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
+      <Helmet>
+        <meta name="robots" content="noindex, follow" />
+        {/* Deliberately no canonical URL for 404 pages */}
+      </Helmet>
       <div className="text-center max-w-md bg-white p-8 rounded-lg shadow-md">
         <h1 className="text-6xl font-bold text-primary mb-4">404</h1>
         <p className="text-xl text-gray-600 mb-6">Oops! Page not found</p>

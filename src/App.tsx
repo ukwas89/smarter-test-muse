@@ -1,3 +1,4 @@
+
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -34,10 +35,19 @@ const LocationHandler = () => {
   return null;
 };
 
-const queryClient = new QueryClient();
+// Force React Helmet to always re-render when route changes
+const helmetContext = {};
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      refetchOnWindowFocus: false,
+      staleTime: 5 * 60 * 1000, // 5 minutes
+    },
+  },
+});
 
 const App = () => (
-  <HelmetProvider>
+  <HelmetProvider context={helmetContext}>
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <Toaster />

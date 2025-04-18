@@ -36,6 +36,12 @@ const logDirectNavigation = () => {
   
   if (isDirectNavigation && path !== '/') {
     console.log(`Direct navigation detected to: ${path}`);
+    
+    // Clear any existing canonical URLs that might be in the static HTML
+    const existingCanonical = document.querySelector('link[rel="canonical"]');
+    if (existingCanonical) {
+      existingCanonical.remove();
+    }
   }
   
   // Pre-warm route data for known direct paths
