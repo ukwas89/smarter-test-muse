@@ -50,8 +50,9 @@ const NotFound = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
       <Helmet>
-        <meta name="robots" content="noindex, follow" />
-        {/* Deliberately no canonical URL for 404 pages */}
+        <title>Page Not Found | PracticeRBTExam.com</title>
+        <meta name="robots" content="noindex, nofollow" />
+        {/* No canonical URL for 404 pages as per SEO best practices */}
       </Helmet>
       <div className="text-center max-w-md bg-white p-8 rounded-lg shadow-md">
         <h1 className="text-6xl font-bold text-primary mb-4">404</h1>

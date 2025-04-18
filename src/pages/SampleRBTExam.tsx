@@ -7,6 +7,7 @@ import Footer from '@/components/layout/Footer';
 import PageHeader from '@/components/sample-exam/PageHeader';
 import ExamOverview from '@/components/sample-exam/ExamOverview';
 import ExamBenefits from '@/components/sample-exam/ExamBenefits';
+import CanonicalTag from '@/components/seo/CanonicalTag';
 
 const SampleRBTExam = () => {
   useEffect(() => {
@@ -15,6 +16,7 @@ const SampleRBTExam = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <CanonicalTag url="https://practicerbtexam.com/sample-rbt-exam" />
       <Helmet>
         <title>Sample RBT Exam | Free Practice Test | PracticeRBTExam.com</title>
         <meta 

@@ -9,6 +9,7 @@ import Testimonials from '@/components/home/Testimonials';
 import CallToAction from '@/components/home/CallToAction';
 import { motion } from 'framer-motion';
 import Preload from '@/components/ui/Preload';
+import CanonicalTag from '@/components/seo/CanonicalTag';
 
 const Index = () => {
   useEffect(() => {
@@ -18,6 +19,7 @@ const Index = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Preload />
+      <CanonicalTag url="https://practicerbtexam.com" />
       <Helmet>
         <title>PracticeRBTExam.com | Free RBT Practice Exam & Test Preparation</title>
         <meta name="description" content="Pass your RBT exam with free practice tests and study materials from PracticeRBTExam.com. Our comprehensive RBT practice exams are designed by experts to prepare you for certification." />
@@ -86,6 +88,7 @@ const Index = () => {
           `}
         </script>
       </Helmet>
+
       <Navbar />
       <main className="flex-grow">
         <motion.div

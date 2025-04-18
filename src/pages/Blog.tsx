@@ -9,6 +9,7 @@ import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
 import { Helmet } from "react-helmet-async";
 import { blogPosts } from "@/data/blogPosts";
+import CanonicalTag from '@/components/seo/CanonicalTag';
 
 const Blog = () => {
   return (
@@ -18,6 +19,7 @@ const Blog = () => {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
+      <CanonicalTag url="https://practicerbtexam.com/blog" />
       <Helmet>
         <title>RBT Practice Exam Blog | 2025 Study Tips & Updates | PracticeRBTExam.com</title>
         <meta name="description" content="Get the latest 2025 RBT exam updates, study strategies, and certification tips on our blog. Prepare for your Registered Behavior Technician exam with expert insights." />
